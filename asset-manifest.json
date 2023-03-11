@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sjames-webtoon/static/css/main.cb13a734.css",
+    "main.js": "/sjames-webtoon/static/js/main.e2ac4d5c.js",
+    "static/js/787.1ce9075e.chunk.js": "/sjames-webtoon/static/js/787.1ce9075e.chunk.js",
+    "static/media/1.png": "/sjames-webtoon/static/media/1.2cd80b5b22b69e2343cf.png",
+    "index.html": "/sjames-webtoon/index.html",
+    "main.cb13a734.css.map": "/sjames-webtoon/static/css/main.cb13a734.css.map",
+    "main.e2ac4d5c.js.map": "/sjames-webtoon/static/js/main.e2ac4d5c.js.map",
+    "787.1ce9075e.chunk.js.map": "/sjames-webtoon/static/js/787.1ce9075e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb13a734.css",
+    "static/js/main.e2ac4d5c.js"
+  ]
+}
