@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
+const App = () => {
+  const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
+  const {id} = getParams();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      {
+        id === '1' &&
+        <div className='title'>
+          3월 캠페인<br/>
+          "대면예배편"
+        </div>
+      }
+      <img src={images[`${id}.png`]}/>
     </div>
   );
+}
+
+const importAll = (r) => {
+  let images = {};
+  r.keys().map(item => images[item.replace('./', '')] = r(item));
+  return images;
+}
+
+const getParams = (url = window.location) => {
+  let params = {};
+  new URL(url).searchParams.forEach(function (val, key) {
+    if (params[key] !== undefined) {
+      if (!Array.isArray(params[key])) {
+        params[key] = [params[key]];
+      }
+      params[key].push(val);
+    } else {
+      params[key] = val;
+    }
+  });
+  return params;
 }
 
 export default App;
