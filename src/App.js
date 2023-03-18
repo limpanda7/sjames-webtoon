@@ -6,13 +6,6 @@ const App = () => {
 
   return (
     <div className='App'>
-      {
-        id === '1' &&
-        <div className='title'>
-          3월 캠페인<br/>
-          "대면예배편"
-        </div>
-      }
       <img src={images[`${id}.png`]}/>
     </div>
   );
